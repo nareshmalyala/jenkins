@@ -1,0 +1,9 @@
+node {
+stage('git clone java project') {
+git branch: 'main', url: 'https://github.com/nareshmalyala/jenkins.git'    
+}
+stage('execute maven target') {
+sh 'mvn install'
+}
+
+}
